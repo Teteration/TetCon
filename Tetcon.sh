@@ -29,6 +29,10 @@ crawl(){
     bash ./Functions/crawl.sh $domain $blacklist
 }
 
+subDomain()
+{
+    bash ./Functions/subDomain.sh $domain
+}
 
 
 
@@ -51,6 +55,13 @@ case "$1" in
         blacklist=$4
         crawl
         ;;
+
+
+    -sd|--subDomainDiscovery)
+        domain=$2
+        subDomain
+        ;;
+
 
 
     esac
