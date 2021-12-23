@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-# TetCon
-Some Recon Service
-
-
-
-
-
-
-inst
-=======
 # TetCon ![lang](https://img.shields.io/badge/Bash-Script-yellow)
 >*Tetcon* is a **shell script** that provide ***Web Application Reconnaissance*** Service such as :
 
@@ -36,6 +25,3 @@ and
 ```
 sudo chmod +x Tetcon.sh
 ```
-
-
->>>>>>> f747f71e1b6bf5d3b44360829573991031a6a4fb
