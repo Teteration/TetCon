@@ -6,7 +6,7 @@
 ## Example usages
 ./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
 
-
+---
 
 ## Installation
 ```
