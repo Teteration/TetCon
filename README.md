@@ -1,9 +1,10 @@
 # TetCon
 >*Tetcon* is a **shell script** that provide ***Web Application Reconnaissance*** Service such as:
+```
 Port Scan\n
 Directory Discovery.
 Sub Domain Discovery.
-
+```
 ![lang](https://img.shields.io/badge/Bash-Script-yellow)
 
 ## Example Usages
