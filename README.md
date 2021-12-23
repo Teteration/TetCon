@@ -3,9 +3,10 @@
 
 ![lang](https://img.shields.io/badge/Bash-Script-yellow)
 
-## Example usages
+## Example Usages
+```
 ./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
-
+```
 ---
 
 ## Installation
