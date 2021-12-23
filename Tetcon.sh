@@ -1,6 +1,7 @@
 #!/bin/bash
 
 figlet Tetcon | lolcat
+echo "Try 'Tetcon -h' for more information."
 
 
 
@@ -24,6 +25,10 @@ portScanner()
     exit
 }
 
+crawl(){
+    bash ./Functions/crawl.sh $domain
+}
+
 
 
 
@@ -38,9 +43,13 @@ case "$1" in
     -p|--portScan)
         ip=$2
         portScanner
-
         ;;
 
+
+    -c|--crawl)
+        domain=$2
+        crawl
+        ;;
 
 
     esac
