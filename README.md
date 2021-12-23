@@ -1,5 +1,5 @@
 # TetCon
->*Tetcon* is a **shell script** that provide ***Web Application Reconnaissance*** Service such as
+>*Tetcon* is a **shell script** that provide ***Web Application Reconnaissance*** Service such as:
 > Port Scan
 > Directory Discovery
 > Sub Domain Discovery
