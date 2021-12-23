@@ -1,5 +1,5 @@
 # TetCon
->*Tetcon* is a shell **script** that ***provids*** Some Recon Service.
+>*Tetcon* is a **shell script** that provide ***Web Application Reconnaissance*** Service.
 
 ![lang](https://img.shields.io/badge/Bash-Script-yellow)
 
