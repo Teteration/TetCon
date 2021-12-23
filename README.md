@@ -4,7 +4,6 @@
 - Port Scan
 - Directory Discovery
 - Sub Domain Discovery
-and so on
 
 
 ## Example Usages
