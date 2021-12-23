@@ -16,6 +16,7 @@ and
 ```
 cd TetCon
 ```
+and
 ```
 sudo chmod +x Tetcon.sh
 ```
