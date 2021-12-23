@@ -1,5 +1,5 @@
 # TetCon
-Tetcon is a shell script that provids Some Recon Service
+>*Tetcon is a shell script that provids Some Recon Service
 ![lang](https://img.shields.io/badge/dynamic/json?color=yellow&label=lable&prefix=pre&query=qurey&suffix=su&url=data)
 
 ## Example usages
