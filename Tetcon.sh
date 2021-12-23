@@ -26,7 +26,7 @@ portScanner()
 }
 
 crawl(){
-    bash ./Functions/crawl.sh $domain
+    bash ./Functions/crawl.sh $domain $blacklist
 }
 
 
@@ -48,6 +48,7 @@ case "$1" in
 
     -c|--crawl)
         domain=$2
+        blacklist=$4
         crawl
         ;;
 

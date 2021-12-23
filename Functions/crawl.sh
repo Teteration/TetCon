@@ -4,7 +4,7 @@
 wget --spider -r -nd --max-redirect=30 $1 2>&1 \
   | grep '^--' \
   | awk '{ print $3 }' \
-  | grep -E -v '\.('${USER_EXCLUDED_EXTENTIONS}')(\?.*)?$' \
+  | grep -E -v '\.('$2')(\?.*)?$' \
   | grep -E -v '\?(p|replytocom)=' \
   | grep -E -v '\/wp-content\/uploads\/' \
   | grep -E -v '\/feed\/' \
