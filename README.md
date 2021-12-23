@@ -5,6 +5,7 @@
 
 ## Example Usages
 ```
+./Tetcon.sh -p {domain/ip}
 ./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
 ```
 ---
