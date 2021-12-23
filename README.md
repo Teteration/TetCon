@@ -1,7 +1,7 @@
 # TetCon
 >*Tetcon is a shell script that provids Some Recon Service.
 
-![lang](https://img.shields.io/badge/dynamic/json?color=yellow&label=lable&prefix=pre&query=qurey&suffix=su&url=data)
+![lang](https://img.shields.io/badge/Bash-Script-yellow)
 
 ## Example usages
 ./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
