@@ -1,5 +1,5 @@
 # TetCon
-Some Recon Service
+Tetcon is a shell script that provids Some Recon Service
 
 
 ## Example usages
