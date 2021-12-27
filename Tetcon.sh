@@ -35,6 +35,11 @@ subDomain()
 }
 
 
+fuzzer()
+{
+    bash ./Functions/fuzzer.sh $domain $wordlist
+}
+
 
 
 
@@ -62,6 +67,12 @@ case "$1" in
         subDomain
         ;;
 
+#Tetcon -f url -w wordlist
+    -f|--fuzzer)
+        domain=$2
+        wordlist=$4
+        fuzzer
+        ;;
 
 
     esac
