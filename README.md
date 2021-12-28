@@ -4,6 +4,7 @@
 - Port Scan
 - Directory Discovery
 - Sub Domain Discovery
+- Fuzzer
 
 
 ## Example Usages
