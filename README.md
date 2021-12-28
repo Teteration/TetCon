@@ -11,6 +11,7 @@
 ./Tetcon.sh -p {domain/ip}
 ./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
 ./Tetcon.sh -sd {domain} 
+./Tetcon.sh -f {domain} -w {word list}
 
 ```
 ---
