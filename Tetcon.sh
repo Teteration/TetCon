@@ -138,6 +138,11 @@ fuzzer()
     exit
 }
 
+technology()
+{
+    bash ./Functions/technology.sh $domain
+}
+
 
 
 
@@ -195,6 +200,12 @@ case "$1" in
             wordlist=$4
             fuzzer
         fi  
+        ;;
+
+
+    -t|--technology)
+        domain=$2
+        technology
         ;;
 
 

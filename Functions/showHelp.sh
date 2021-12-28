@@ -74,3 +74,14 @@ On_IBlue='\033[0;104m'    # Blue
 On_IPurple='\033[0;105m'  # Purple
 On_ICyan='\033[0;106m'    # Cyan
 On_IWhite='\033[0;107m'   # White
+
+
+
+
+
+echo  -p,  --portScan 
+echo  -c,  --crawl
+echo  -sd, --subDomainDiscovery 
+echo  -f,  --fuzzer
+echo  -w,  --wordlist
+echo  -blacklist,
