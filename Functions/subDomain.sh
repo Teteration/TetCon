@@ -74,4 +74,4 @@ On_IPurple='\033[0;105m'  # Purple
 On_ICyan='\033[0;106m'    # Cyan
 On_IWhite='\033[0;107m'   # White
 
-curl "https://crt.sh/?q=$1&output=json" | jq | grep common | sort -u | cut -d " " -f 6 | sed 's/^"//' | sed 's/",$//'
+curl "https://crt.sh/?q=$1&output=json" 2>/dev/null | jq | grep common | sort -u | cut -d " " -f 6 | sed 's/^"//' | sed 's/",$//'

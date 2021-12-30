@@ -4,14 +4,16 @@
 - Port Scan
 - Directory Discovery
 - Sub Domain Discovery
+- Fuzzer
 
 
 ## Example Usages
 ```
-./Tetcon.sh -p {domain/ip}
-./Tetcon.sh -c {domain/ip} -blacklist "ext|ext|ext...|ext"
-./Tetcon.sh -sd {domain} 
-./Tetcon.sh -f {domain} -w {word list}
+./Tetcon.sh -p {domain.tld/ip}
+./Tetcon.sh -c {domain.tld/ip} -blacklist "ext|ext|ext...|ext"
+./Tetcon.sh -sd {domain.tld} 
+./Tetcon.sh -f {domain.tld} -w {word list}
+./Tetcon.sh -t {scheme://domain.tld}
 
 ```
 ---

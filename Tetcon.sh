@@ -2,9 +2,9 @@
 
 
 
-figlet Tetcon | lolcat
+figlet Tetcon . . . | lolcat
 
-a=$'\n\n\n'
+a=$'\n'
 echo "$a"
 
 
@@ -213,8 +213,3 @@ case "$1" in
     shift
 
 
-
-# if [ "$SHOW_HELP" -eq 1 ];then
-#     showHelp
-#     exit
-# fi
