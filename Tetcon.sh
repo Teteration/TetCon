@@ -116,8 +116,18 @@ showHelp()
 
 portScanner()
 {
-    bash ./Functions/portScanner.sh $ip
+    bash ./Functions/portScanner.sh $ip 1
     exit
+}
+
+fastPortScan()
+{
+    bash ./Functions/portScanner.sh $ip 2
+}
+
+singlePortScan()
+{
+    bash ./Functions/portScanner.sh $ip $port 3
 }
 
 crawl(){
@@ -159,6 +169,29 @@ case "$1" in
         else 
             ip=$2
             portScanner
+        fi
+        ;;
+
+
+    -sp|singlePortScan)
+        if [ -z $2 ];
+        then
+            echo "enter url"
+        else 
+            ip=$2
+            port=$3
+            singlePortScan
+        fi
+        ;;
+
+
+    -fp|fastPortScan)
+        if [ -z $2 ];
+        then
+            echo "enter url"
+        else 
+            ip=$2
+            fastPortScan
         fi
         ;;
 

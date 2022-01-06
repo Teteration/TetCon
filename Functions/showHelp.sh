@@ -79,9 +79,9 @@ On_IWhite='\033[0;107m'   # White
 
 
 
-echo  -p,  --portScan 
-echo  -c,  --crawl
-echo  -sd, --subDomainDiscovery 
-echo  -f,  --fuzzer
-echo  -w,  --wordlist
-echo  -blacklist,
+echo  "  -p,  --portScan"
+echo  "  -c,  --crawl"
+echo  "  -sd, --subDomainDiscovery"
+echo  "  -f,  --fuzzer"
+echo  "  -w,  --wordlist"
+echo  "  -blacklist"

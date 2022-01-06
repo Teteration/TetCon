@@ -9,12 +9,13 @@
 
 ## Example Usages
 ```
-./Tetcon.sh -p {domain.tld/ip}
+./Tetcon.sh -p {ip}
+./Tetcon.sh -sp {ip} {port}
+./Tetcon.sh -fp {ip}
 ./Tetcon.sh -c {domain.tld/ip} -blacklist "ext|ext|ext...|ext"
 ./Tetcon.sh -sd {domain.tld} 
 ./Tetcon.sh -f {domain.tld} -w {word list}
 ./Tetcon.sh -t {scheme://domain.tld}
-
 ```
 ---
 
