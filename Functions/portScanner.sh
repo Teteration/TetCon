@@ -1,6 +1,25 @@
 #!/bin/bash
     # echo This is Port Scanner
 
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
+
+# Bold
+BBlack='\033[1;30m'       # Black
+BRed='\033[1;31m'         # Red
+BGreen='\033[1;32m'       # Green
+BYellow='\033[1;33m'      # Yellow
+BBlue='\033[1;34m'        # Blue
+BPurple='\033[1;35m'      # Purple
+BCyan='\033[1;36m'        # Cyan
+BWhite='\033[1;37m'       # White
+
 if [ $2 == 1 ];
 then
     nc -z -v -w 1 $1 1-50  2>&1 | grep succeeded &
@@ -24,20 +43,16 @@ then
 
 elif [ $2 == 2 ];
 then
-    # echo 2
-    # echo 3
-    echo "[ Port ] : [ Possible service running on ] "
+
+    echo -e "${Red}[${White} Port ${Red}]${White} : ${Red}[${White} Possible service running on ${Red}]${White}\n "
 
     while read port;
     do 
-        # echo $port
         res=`nc -z -v -w 1 $1 $port  2>&1 | grep succeeded | cut -d " " -f 4`
-        # echo $res
         len_res=${#res}
         if [ $len_res != 0 ];
         then
-            grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "     ",$2,":",$1}'
-            # echo hom
+            grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
         fi
 
 
@@ -46,12 +61,11 @@ then
 
 else
     res=`nc -z -v -w 1 $1 $2  2>&1 | grep succeeded | cut -d " " -f 4`
-    # echo $res
     len_res=${#res}
     if [ $len_res != 0 ];
     then
     
-        grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "     ",$2,":",$1}'
+        grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
 
     fi
 fi 
@@ -64,9 +78,3 @@ fi
 
 # a=`ls`
 # echo $a
-
-
-
-
-# nc -v -z -w 1 toplearn.com 53
-#  & nc -z -v -w 1 185.129.168.26 50-81 2>&1 | grep succeeded
