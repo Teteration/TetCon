@@ -20,6 +20,11 @@
 ---
 
 ## Installation
+install requirements
+```
+sudo apt install figlet dnsutils lolcat netcat curl jq
+```
+Clone the repo
 ```
 git clone https://github.com/mahdihamedi79/TetCon.git
 ```
