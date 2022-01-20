@@ -1,5 +1,4 @@
 #!/bin/bash
-echo This is modular Help Menu 
 
 # COLOR
 # Reset
@@ -77,11 +76,24 @@ On_IWhite='\033[0;107m'   # White
 
 
 
-
-
-echo  "  -p,  --portScan"
-echo  "  -c,  --crawl"
-echo  "  -sd, --subDomainDiscovery"
-echo  "  -f,  --fuzzer"
-echo  "  -w,  --wordlist"
-echo  "  -blacklist"
+echo "|options|"
+echo 
+echo -e "${Cyan}  -p${White},${Cyan} --portScan          ${Yellow}               Port Scaner"
+echo -e "${Cyan}  -sp                                    ${Yellow}Single Port Scanner : just scan specific port"
+echo -e "${Cyan}  -fp                                    ${Yellow}Fast Port Scan : just scan common port"
+echo -e "${Cyan}  -c${White},${Cyan} --crawl             ${Yellow}               Crawler/Spider"
+echo -e "${Cyan}  -blacklist                             ${Yellow}block the specified extension in Crawl mode "
+echo -e "${Cyan}  -sd${White},${Cyan}--subDomainDiscovery${Yellow}               Subdomain Discovery"
+echo -e "${Cyan}  -f${White},${Cyan} --fuzzer            ${Yellow}               Fuzzer :  Discover directory and files"
+echo -e "${Cyan}  -w${White},${Cyan} --wordlist          ${Yellow}               basic information about web site${White}"
+echo
+echo
+echo "Examples : "
+echo
+echo -e "-p  {ip}"
+echo -e "-fp {ip}"
+echo -e "-sp {ip} {port}"
+echo -e "-c  {domain.tld} -blacklist \"ext|ext|ext...|ext\""
+echo -e "-sd {domain.tld}"
+echo -e "-f  {domain.tld} -w {word list}"
+echo -e "-t  {scheme://domain.tld}"

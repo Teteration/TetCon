@@ -22,6 +22,8 @@ BWhite='\033[1;37m'       # White
 
 if [ $2 == 1 ];
 then
+    #cause port scaning take long time , so we just implement port scanning for  0-1000 ports
+    # this is someting likes multi threading in bash script --> there is no other way for that
     nc -z -v -w 1 $1 1-50  2>&1 | grep succeeded &
     nc -z -v -w 1 $1 51-100 2>&1 | grep succeeded &
     nc -z -v -w 1 $1 101-150 2>&1 | grep succeeded &
@@ -39,11 +41,12 @@ then
     nc -z -v -w 1 $1 701-750 2>&1 | grep succeeded &
     nc -z -v -w 1 $1 751-800 2>&1 | grep succeeded &
     nc -z -v -w 1 $1 801-850 2>&1 | grep succeeded &
-    nc -z -v -w 1 $1 851-900 2>&1 | grep succeeded
+    nc -z -v -w 1 $1 851-900 2>&1 | grep succeeded &
+    nc -z -v -w 1 $1 901-1000 2>&1 | grep succeeded
 
 elif [ $2 == 2 ];
 then
-
+    # this is for fast port scanning . it just scan common port that common services running on
     echo -e "${Red}[${White} Port ${Red}]${White} : ${Red}[${White} Possible service running on ${Red}]${White}\n "
 
     while read port;
@@ -52,29 +55,21 @@ then
         len_res=${#res}
         if [ $len_res != 0 ];
         then
-            grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
+            grep $res ./Functions/.services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
         fi
 
 
-    done < ./Functions/final.txt
+    done < ./Functions/.final.txt
 
 
 else
+    # this is for single port scanning
     res=`nc -z -v -w 1 $1 $2  2>&1 | grep succeeded | cut -d " " -f 4`
     len_res=${#res}
     if [ $len_res != 0 ];
     then
     
-        grep $res ./Functions/services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
+        grep $res ./Functions/.services -m 1 | cut -d "/" -f 1 | awk '{print "    \033[0;37m ",$2,"\033[0;37m:\033[0;36m",$1}'
 
     fi
 fi 
-
-
-
-
-
-
-
-# a=`ls`
-# echo $a

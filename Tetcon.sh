@@ -3,7 +3,7 @@
 
 
 figlet Tetcon . . . | lolcat
-
+# this is banner
 a=$'\n'
 echo "$a"
 
@@ -100,7 +100,7 @@ if [ -z $1 ] && [ -z $2 ] && [ -z $3 ];
 then
     echo -e "${Red}[*]${Color_Off} Try 'Tetcon -h' for more information."
 fi
-
+# return default error if no param pass to ...
 
 
 
@@ -128,6 +128,7 @@ fastPortScan()
 singlePortScan()
 {
     bash ./Functions/portScanner.sh $ip $port 3
+    exit
 }
 
 crawl(){
@@ -151,11 +152,12 @@ fuzzer()
 technology()
 {
     bash ./Functions/technology.sh $domain
+    exit
 }
 
 
 
-
+# switchs handling
 case "$1" in
     -h|-\?|--help)
         showHelp
@@ -220,7 +222,6 @@ case "$1" in
         fi
         ;;
 
-#Tetcon -f url -w wordlist
     -f|--fuzzer)
         if [ -z $2 ];
         then
