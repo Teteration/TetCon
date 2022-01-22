@@ -5,7 +5,7 @@
 - Directory Discovery
 - Sub Domain Discovery
 - Fuzzer
-
+- Technology Discovery
 
 ## Example Usages
 ```
