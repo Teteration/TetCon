@@ -83,7 +83,7 @@ while read line;
 do 
     echo "Testing for : $line"
 
-    if curl -I $1/$line 2>/dev/null | grep -E "HTTP\/2 200" 1>/dev/null ;
+    if curl -I -L $1/$line 2>/dev/null | grep -E "HTTP\/2 200" 1>/dev/null ;
     then     
         echo "$line status : 200" >> re1
     fi
