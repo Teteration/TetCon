@@ -145,7 +145,7 @@ subDomain()
 
 fuzzer()
 {
-    bash ./Functions/fuzzer.sh $domain $wordlist
+    bash ./Functions/fuzzer.sh $Fuzz_type $domain $wordlist
     exit
 }
 
@@ -222,7 +222,7 @@ case "$1" in
         fi
         ;;
 
-    -f|--fuzzer)
+    -f|--fuzzer|-sf)
         if [ -z $2 ];
         then
             echo "Fuzzer : Missing domain"
@@ -232,6 +232,7 @@ case "$1" in
         else 
             domain=$2
             wordlist=$4
+            Fuzz_type=$1
             fuzzer
         fi  
         ;;
