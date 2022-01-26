@@ -11,7 +11,7 @@ then
 
         if curl -I -L $2/$line 2>/dev/null | grep -E "HTTP\/2 200|HTTP\/1.1 200" 1>/dev/null ;
         then     
-            echo "$line status bii : 200" >> re1
+            echo -e "$line : ${Green}200${White}" >> re1
         fi
 
     done < $3
@@ -30,7 +30,7 @@ then
     do 
         echo "Testing for : $line"
         url="http://$line.$2"
-        if response=$(curl -L --write-out '%{http_code}' --silent --output /dev/null $url | grep -E "200|301|302|403|401|502") ;
+        if response=$(curl -sk -L --write-out '%{http_code}' --silent --output /dev/null $url | grep -E "200|301|302|403|401|502") ;
         then     
             echo -e "$url : ${Green}$response ${White} " >> re1
         fi
