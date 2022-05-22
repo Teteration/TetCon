@@ -26,7 +26,7 @@ sudo apt install figlet dnsutils lolcat netcat curl jq
 ```
 Clone the repo
 ```
-git clone https://github.com/mahdihamedi79/TetCon.git
+git clone https://github.com/Teteration/TetCon.git
 ```
 and
 ```
